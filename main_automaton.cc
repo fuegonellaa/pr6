@@ -16,7 +16,11 @@
 #include "automaton.h"
 
 int main(int argc, char* argv[]) {
-  if (argc != 4) {
+  if (argc == 1) {
+    std::cout << "The right way of executing this code is ./pattern_search pattern infile.txt outfile.txt" << std::endl;
+    std::cout << "Use -h or --help to see more information about this code" << std::endl;
+    return 1;
+  } else if (argc != 4) {
     std::string help = "--help";
     std::string help2 = "-h";
     std::cout << "The right way of executing this code is ./pattern_search pattern infile.txt outfile.txt" << std::endl;
